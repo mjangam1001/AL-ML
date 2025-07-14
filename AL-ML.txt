@@ -1,0 +1,164 @@
+AL :- Artificial intelligence
+
+ML :- Machine Learning
+   :- It is subset of AI
+   
+->Real-World Applications
+
+Customer support automation
+Content creation
+Programming help (like Copilot)
+Market sentiment tracking
+Medical or legal document summarization
+Voice assistants (paired with speech-to-text)
+
+Types of ML:
+-> Supervised Learning: Learns from labeled data (e.g., predicting house prices).
+-> Unsupervised Learning: Finds patterns in unlabeled data (e.g., customer segmentation).
+-> Reinforcement Learning: Learns through trial and error (e.g., game-playing AI like AlphaGo).
+
+Think of AI as the whole field of creating smart machines, and ML as one of the main tools used to make that happen.
+
+Differnt branches of AI:-
+-> Machine Learning (Predictive analytics, recommendation systems, speech recognition.)
+-> Natural language processing (ChatGPT)
+-> Computer Vision
+-> Deep learning
+
+Language models come under NLP
+A language model is a type of AI model trained to understand, generate, and sometimes translate human language.
+Language models uses deep learning, transformer architecture
+
+| Feature      | Language Model (LM)            | Large Language Model (LLM)                     |
+| ------------ | ------------------------------ | ---------------------------------------------- |
+| Size         | Can be small or medium         | Very large (billions of parameters)            |
+| Architecture | Any (n-gram, RNN, Transformer) | Mostly Transformer-based                       |
+| Data         | Small to moderate text corpora | Huge internet-scale datasets                   |
+| Capabilities | Basic predictions or tasks     | Versatile: generate text, summarize, translate |
+| Examples     | n-gram model, RNN              | GPT-4, LLaMA, Claude, PaLM                     |
+
+
+How to Start Using Language Models
+
+✅ Option 1: Pretrained APIs (No training needed)
+
+OpenAI (GPT-3.5, GPT-4),Anthropic (Claude),Google (Gemini),Cohere, Mistral, Perplexity
+-> you can directly use these models via APIs provided by corresponding venders by paying the charges
+-> It is just as calling any rest API
+
+✅ Option 2: Open-Source Models
+
+Use via Hugging Face 🤗:
+
+GPT-2, LLaMA, Mistral, BERT, Falcon
+Load using `transformers` in Python:
+
+  ```python
+  from transformers import pipeline
+  pipe = pipeline("text-generation", model="gpt2")
+  print(pipe("The future of AI is", max_length=20))
+  ```
+
+✅ **Option 3: Train or Fine-tune Your Own**
+
+* Requires text datasets
+* Use frameworks like PyTorch, TensorFlow, Hugging Face
+* Fine-tune with **LoRA** or **QLoRA** for efficient training
+
+---
+
+Tasks Language Models Can Do
+
+1)Natural Language Understanding (NLU):
+* Sentiment analysis
+* Text classification
+* Named entity recognition (NER)
+* Question answering
+
+2)Natural Language Generation (NLG):
+* Text completion
+* Text summarization
+* Translation
+* Chatbots and dialogue systems
+* Code generation (e.g., Copilot)
+
+
+
+6. Tools & Libraries
+
+| Tool/Library | Focus                            | Best For                                 |
+| ------------ | -------------------------------- | ---------------------------------------- |
+| Transformers | NLP / LLMs                       | Using pretrained language models         |
+| PyTorch      | Deep Learning (flexible)         | Custom neural network development        |
+| scikit-learn | Traditional ML (structured data) | Fast experimentation & classical models  |
+| TensorFlow   | Deep Learning (Google's lib)     | Large-scale production ML pipelines      |
+| spaCy        | NLP pipeline & text processing   | Named entity recognition, POS tagging    |
+| LangChain    | LLM app framework                | Chatbots, retrieval-augmented generation |
+
+We use transformers to use pre trained languagemodels present on huggingface
+Langchain can be used to Chain multiple LLM calls together, Include memory, tools, search, or agents. As the name suggests, its chain of language model operations
+
+
+
+->AI Cloud Services are platforms provided by companies like OpenAI, Google, AWS, Microsoft, IBM etc., that let you build, deploy, and scale AI applications without needing to manage your own infrastructure.
+
+They offer:
+->Pretrained models (LLMs, vision, speech, etc.)
+->APIs for NLP, image recognition, translation, etc.
+->Training environments (notebooks, GPUs/TPUs)
+->MLOps, model hosting, and data pipelines
+
+
+Major AI Cloud Providers
+
+1.OpenAI (via Microsoft Azure)
+APIs: GPT-4, GPT-3.5, DALL·E, Whisper
+Use Cases: Chatbots, content generation, summarization, code generation
+
+
+2.Amazon Web Services (AWS)
+Amazon SageMaker → full ML platform (build/train/deploy)
+
+
+3.Microsoft Azure AI
+Azure OpenAI Service (GPT models)
+Azure Cognitive Services → vision, speech, language, translation, etc.
+Azure Machine Learning → training, MLOps, deployment
+
+4.Google Cloud (Vertex AI)
+Gemini (LLM), PaLM, BERT, Codey (code generation)
+AutoML → train models without deep expertise
+Vision AI, Translation, Speech-to-Text
+
+
+✅ Common Features Across AI Cloud Services
+
+| Feature                 | Description                                      |
+| ----------------------- | ------------------------------------------------ |
+| Prebuilt APIs           | For NLP, vision, translation, etc.               |
+| Model Training & Tuning | Train your own models or fine-tune existing ones |
+| Data Pipelines          | Ingest, clean, and process data at scale         |
+| Deployment Tools        | Host and serve ML models easily (REST APIs)      |
+| AutoML                  | Auto-training of models for non-experts          |
+| GPU Access              | On-demand GPUs/TPUs for training deep learning   |
+| Security & Monitoring   | Logging, versioning, encryption, audit trails    |
+
+
+🎯 When to Use AI Cloud Services
+
+Use them when you need:
+
+✅ Scalability — Easily handle big datasets or many users
+✅ Pretrained Models — Use models like GPT, BERT, CLIP without training
+✅ Rapid Development — Quickly prototype and deploy with APIs
+✅ Enterprise Readiness — Compliance, security, MLOps
+✅ Tool Integration — Use with other cloud services (storage, databases)
+
+
+❌ When Not to Use
+
+Avoid them if:
+
+❌ You want full control or privacy (e.g., sensitive data)
+❌ You're building small offline tools or local prototypes
+❌ You can't afford API costs or cloud pricing
